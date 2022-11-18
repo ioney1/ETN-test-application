@@ -1,0 +1,69 @@
+transaction-field {
+  .failed-text {
+    color: color($colors, message-red);
+  }
+
+  .successful-text {
+    color: color($colors, message-green);
+  }
+
+  .pending-text {
+    color: #6b9dbe;
+    text-decoration: line-through;
+  }
+
+  .container {
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 8px;
+    gap: 24px;
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    flex-grow: 1;
+
+    .time-id {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      flex-grow: 1;
+
+      .l1 {
+        color: color($colors, secondary);
+        max-width: 20%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+      }
+
+      .p3 {
+        color: color($colors, grey);
+        align-self: stretch;
+      }
+    }
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 2px;
+  }
+
+  ion-row {
+    padding: 0px 8px;
+    gap: 24px;
+  }
+}

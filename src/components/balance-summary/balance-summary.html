@@ -1,0 +1,26 @@
+<!-- Generated template for the BalanceSummaryComponent component -->
+<div class="outer-container">
+  <div class="main-content">
+    <span class="l3">Available balance</span>
+
+    <balance-display [value]="balanceETN"></balance-display>
+  </div>
+
+  <div class="balance-conversion">
+    <div>
+      <h5>{{balanceETN + 'ETN'}}</h5>
+      <span class="fi fis fi-au"></span>
+    </div>
+    <link-button></link-button>
+  </div>
+
+  <div class="app-actions">
+    <icon-button
+      *ngFor="let action of actions"
+      [icon]="action.icon"
+      [label]="action.name | titlecase"
+      shape="circle"
+      size=40
+    ></icon-button>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+balance-display {
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    padding-left: 4px;
+    gap: 8px;
+    align-self: stretch;
+
+    &.right {
+      flex-direction: row-reverse;
+      justify-content: right;
+    }
+
+    *:first-child {
+      align-self: stretch;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+percent-change-badge {
+  span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    i{
+      color: inherit;
+    }
+  }
+
+  .negative{
+    color: map-get($colors, message-red)
+  }
+
+  .positive{
+    color: map-get($colors, message-green)
+  }
+
+  .right{
+    flex-direction: row-reverse;
+    justify-content: right;
+  }
+}

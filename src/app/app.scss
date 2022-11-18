@@ -1,5 +1,115 @@
 // http://ionicframework.com/docs/theming/
 
+@import "../theme/font-styles";
+@import "../theme/button-styles";
+@import "../theme/icons";
+
+@mixin theme-colors($theme) {
+  color: map-get(map-get($colors, $theme), "contrast");
+  background-color: map-get(map-get($colors, $theme), "base");
+}
+
+
+
+$frosted-gradient: linear-gradient(
+    77.14deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 255, 255, 0) 97.7%
+  ),
+  rgba(24, 41, 52, 0.3);
+
+//Effects
+
+@mixin frosted-glass-effect() {
+  box-shadow: 0px 0px 2px 2px rgba(37, 135, 183, 0.25);
+  backdrop-filter: blur(7.5px);
+}
+
+ion-content {
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: hidden;
+
+  & ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+$background-element-dimensions: (
+  width: 60%,
+  height: 150%,
+);
+
+.app-background {
+  padding: 0px;
+
+  overflow: hidden;
+  
+  background: linear-gradient(
+      29.21deg,
+      rgba(182, 242, 231, 0) 72.91%,
+      rgba(182, 242, 231, 0.15) 100.46%
+    ),
+    color($colors, primary);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: map-get($background-element-dimensions, width);
+    height: map-get($background-element-dimensions, height);
+    left: -30%;
+    top: -65%;
+
+    background: #005ad3;
+    opacity: 0.2;
+    box-shadow: 0px 0px 0px 1px rgba(253, 253, 253, 0.25),
+      inset 0px 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(46.07deg);
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    z-index: 0;
+  }
+
+  &::after {
+    @extend ::before;
+    left: unset; //+ map-get($background-element-dimensions, width);
+    top: unset;
+    //add media query to increase percentages on smaller screens to improve ratios
+    right: -20%;
+    top: -30%;
+  }
+
+  .content-container{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 0px;
+  overflow: hidden;
+  }
+}
+
+.app-bottom-sheet-container {
+  @include theme-colors(light);
+  
+  padding: 36px 0px 6100px;
+  margin-top: 36px;
+
+  width: 100%;
+  height: 100%;
+
+
+
+  box-shadow: 0px -4px 4px rgba(33, 129, 176, 0.27);
+  border-radius: 16px 16px 0px 0px;
+
+  flex: 1 1 auto;
+  align-self: stretch;
+  
+}
 
 // App Global Sass
 // --------------------------------------------------

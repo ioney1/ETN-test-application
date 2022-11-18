@@ -1,0 +1,188 @@
+/*#region headings*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Satoshi";
+  font-style: normal;
+}
+
+h1 {
+  font-weight: 650;
+  font-size: calc(32px - calc( 100% * 100/ 844 ));
+  line-height: 128%;
+}
+
+@media screen {
+  
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 132%;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 128%;
+  letter-spacing: 0.02em;
+}
+
+h4 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 120%;
+  /* identical to box height, or 24px */
+
+  letter-spacing: 0.02em;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 124%;
+  /* or 22px */
+
+  letter-spacing: 0.02em;
+}
+/*#endregion headings*/
+
+/*#region paragraphs*/
+.p1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.p1-bold {
+  @extend .p1;
+  font-weight: 600;
+}
+
+.p1-italic {
+  @extend .p1;
+  font-style: italic;
+}
+
+.p2 {
+  @extend .p1;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+}
+
+.p2-bold {
+  @extend .p2;
+  font-weight: 600;
+  line-height: 155%;
+}
+
+.p2-italic {
+  @extend .p2;
+  font-style: italic;
+  line-height: 155%;
+}
+
+.p3 {
+  @extend .p1;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.p3-bold {
+  @extend .p3;
+  font-weight: 600;
+}
+
+.p3-italic {
+  @extend .p3;
+  font-style: italic;
+}
+/*#endregion paragraphs*/
+
+/*#region buttons*/
+
+.b1 {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.b2 {
+  @extend .b1;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.b3 {
+  @extend .b1;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+}
+
+.b4 {
+  @extend .b3;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/*#endregion*/
+
+/*#region labels*/
+
+.l1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+
+  letter-spacing: 0.04em;
+}
+
+.l2 {
+  @extend .l1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.l3 {
+  @extend .l1;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 0.03em;
+}
+
+.l4{
+    @extend .l2;
+    font-size: 12px;
+line-height: 14px;
+/* identical to box height, or 117% */
+
+letter-spacing: 0.03em;
+}
+
+.l5{
+    @extend .l1;
+    font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+letter-spacing: 0.02em;
+}
+
+/*#endregion*/

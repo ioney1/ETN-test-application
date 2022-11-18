@@ -1,0 +1,12 @@
+<!-- Generated template for the HeaderComponent component -->
+
+<div class="app-navbar" style="background-color: transparent">
+  <icon-button shape="circle" *ngIf="isHome; else showBack"></icon-button>
+
+  <ng-template #showBack>
+    <icon-button icon="ph-arrow-left-bold" theme="btn-transparent"></icon-button>
+    <h5>{{title}}</h5>
+  </ng-template>
+
+  <icon-button icon="ph-bell-bold" theme="btn-transparent"></icon-button>
+</div>

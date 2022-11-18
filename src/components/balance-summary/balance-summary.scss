@@ -1,0 +1,66 @@
+balance-summary {
+  * {
+    color: map-get($colors, white);
+  }
+
+  .outer-container,
+  .main-content,
+  .balance-conversion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  .outer-container {
+    //frosted glass effect
+    background: $frosted-gradient;
+    @include frosted-glass-effect();
+
+    //flex layout
+    padding: 16px 16px 32px;
+    gap: 8px;
+    isolation: isolate;
+
+    border-radius: 8px;
+  }
+
+  .main-content {
+    padding: 0px;
+    gap: 4px;
+    align-self: stretch;
+
+   
+  }
+
+  .balance-conversion {
+    padding: 0px;
+    gap: 4px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      gap: 8px;
+
+      span {
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .app-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    position: absolute;
+    left: calc(50% - 164px / 2 + 78px);
+    bottom: -30px;
+  }
+}

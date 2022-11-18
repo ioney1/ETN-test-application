@@ -1,0 +1,8 @@
+<!-- Generated template for the BalanceDisplayComponent component -->
+<div [class]="alignment">
+  <h1 *ngIf="textClass.includes('h1'); else altTextStyle" [class]="textClass">{{value | currency : ' '}} ETN</h1>
+  <ng-template #altTextStyle>
+    <span [class]="textClass">{{displayedText}}</span>
+  </ng-template>
+  <percent-change-badge [value]="percentChange" [alignment]="alignment"></percent-change-badge>
+</div>

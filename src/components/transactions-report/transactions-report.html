@@ -1,0 +1,38 @@
+<!-- Generated template for the TransactionsReportComponent component -->
+<div class="container">
+  <span class="l3">This Month</span>
+
+  <div class="data-container">
+
+   <!---Fix ngFor container-->
+    <div class="metric-container right-align">
+      <div class="data right-align">
+        <span class="label"> Outgoing </span>
+        <balance-display
+          text-class="value-text"
+          [value]="data.current[0]"
+          alignment="right"
+        ></balance-display>
+      </div>
+      <span class="bar outgoing" >
+        <span class="bar-inner" [style.width.%]="barWidth[0]">'</span>
+      </span>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="metric-container">
+      <div class="data">
+        <span class="label"> Incoming </span>
+        <balance-display
+          text-class="value-text"
+          [value]="data.current[1]"
+          alignment="left"
+        ></balance-display>
+      </div>
+      <span class="bar incoming">
+        <span class="bar-inner"  [style.width.%]="barWidth[1]">'</span>
+      </span>
+    </div>
+  </div>
+</div>

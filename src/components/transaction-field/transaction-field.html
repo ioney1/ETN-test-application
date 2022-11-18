@@ -1,0 +1,14 @@
+<!-- Generated template for the TransactionFieldComponent component -->
+<div class="container">
+  <div class="left-side">
+    <transaction-icon [type]="type" [status]="status" [image]="image"></transaction-icon>
+    <div class="time-id">
+      <div class="l1">{{name}}</div>
+      <span class="p3">{{transaction.dateCreated | date}}</span>
+    </div>
+  </div>
+  <div class="right-side">
+    <span [class]="'l2 etn-value ' + textClass">{{symbol + (amount | currency: ' ' )+ ' ETN'}}</span>
+    <span class="p3 fiat-value">45.66</span>
+  </div>
+</div>

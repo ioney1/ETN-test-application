@@ -1,0 +1,9 @@
+<!-- Generated template for the IconButtonComponent component -->
+
+<span [class]="labelStyle">
+<button (click)="handleClick()" [ngStyle] = 'buttonStyle' [ngClass]="theme">
+  <i *ngIf ="!image" [class]="icon"></i>
+</button>
+{{label}}
+
+</span>

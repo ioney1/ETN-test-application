@@ -1,0 +1,40 @@
+shortcuts-carousel {
+  .container {
+    padding: 0px 16px;
+    width: 100%;
+  }
+
+  .shortcut-categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px 0px 0px;
+    gap: 16px;
+
+    /* Primary/White */
+
+    background: transparent;
+    //border-right: 1px solid #c6c6c6;
+    box-shadow: 2px 0px 12px 4px #fdfdfd;
+    z-index: 2;
+  }
+
+  .shortcut-contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 16px 0px 500px;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+   z-index: 1;
+    justify-content: start;
+
+    align-self: stretch;
+
+    icon-button{
+      height: 100%;
+      max-width: 48px;
+    }
+  }
+}

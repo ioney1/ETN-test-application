@@ -1,0 +1,5 @@
+<!-- Generated template for the TransactionIconComponent component -->
+<span [class]="spanBorderClass">
+  <icon-button class="icon" theme="btn-blue" [size]="iconButtonSize" [style.opacity]="iconOpacity" [image-url]="image"></icon-button>
+  <transaction-badge *ngIf="isTopup" [type]="type"></transaction-badge>
+</span>

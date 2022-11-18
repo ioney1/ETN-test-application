@@ -1,0 +1,14 @@
+<!-- Generated template for the TransactionListComponent component -->
+<div>
+  <ion-list>
+    <transaction-field 
+    *ngFor="let transaction of transactions"
+    [paymentType]="transaction.paymentType"
+    [paymentStatus]="transaction.status"
+    [destinationWallet]="transactions.destinationWallet"
+    [amount]="transactions.destinationAmount"
+    [image]="image"
+    [transaction]="transaction"
+    ></transaction-field>
+  </ion-list>
+</div>

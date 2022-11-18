@@ -1,0 +1,42 @@
+<!-- Generated template for the ShortcutsCarouselComponent component -->
+
+<div class="container">
+  <ion-grid no-padding>
+    <ion-row justify-content-between align-items-center >
+      <ion-col class="shortcut-categories" col-5>
+        <icon-button
+          *ngFor="let category of categories"
+          size="48"
+          shape="squircle"
+          label-class="b3"
+          [label]="category.name | titlecase"
+          [icon]="category.icon"
+          [fill]="category.color"
+          [icon-fill]="categoryIconColor"
+        ></icon-button>
+      </ion-col>
+      <ion-col class="shortcut-contacts" col-7>
+          <ion-list style="
+          display: flex;
+    flex-grow: 1;
+    gap: 16px;
+    justify-self: flex-start;
+    margin: 0;
+          " scrollX="true" no-margin>
+              <icon-button
+            *ngFor="let contact of contacts"
+            size="48"
+            fill="#c6c6c6"
+            icon-fill="#fdfdfd"
+            shape="circle"
+            [label]="contact.firstName + '\n' + contact.lastName"
+            label-class="b4 contacts-label"
+            [image-url]="contact.imageUrl"
+          ></icon-button>
+          </ion-list>
+           
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
